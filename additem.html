@@ -1,0 +1,60 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		
+		<meta name="keywords" content="bible study, lessons" />
+		<meta name="description" content="Bible Studies To Go is an app that collects bible studies for later use." />
+		<meta name="robots" content="noindex,nofollow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<meta charset="utf-8" />
+
+		<title>Add A New Bible Study Lesson</title>
+	</head>
+	<body>
+		<h1>Bible Studies To Go</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Basic Information</legend>
+				<ul>
+					<li><label for="lesson-name">Lesson Name</label> <input type="text" id="lesson-name" /></li>
+					<li><label for="author">Author</label> <input type="text" id="author" /></li>
+					<li><label for="date">Date</label><input type="date" name="postdate" /></li>
+				</ul>
+			</fieldset>	
+			<fieldset>
+				<legend>Lesson Information</legend>
+				<label for="topic">Study Topic</label>
+				<select id="topic">
+					<optgroup label="Books of the Bible">
+						<option value="Genesis">Genesis</option>
+						<option value="Exodus">Exodus</option>
+						<option value="Matthew">Matthew</option>
+						<option value="Mark">Mark</option>
+						<option value="Luke">Luke</option>
+						<option value="John">John</option>
+					</optgroup>
+					<optgroup label="Topical">
+						<option value="Christian Life">Christian Life</option>
+						<option value="Marriage">Marriage</option>
+						<option value="Family">Family</option>
+					</optgroup>
+				</select>
+				<ul>
+					<li>Choose Audience:
+						<ul>
+							<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
+							<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
+							<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
+							<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
+							<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
+						</ul>
+					</li>
+				</ul>
+			</fieldset>	
+			<fieldset>
+				<legend>Lesson</legend>
+				<textarea name="lesson-text" rows="8" cols="40"></textarea>"
+			</fieldset>	
+		</form>
+	</body>
+</html>
