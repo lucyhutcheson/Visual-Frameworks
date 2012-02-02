@@ -1,0 +1,38 @@
+Recent Commits to Visual-Frameworks:master    
+https://github.com/iamhutch/Visual-Frameworks    
+
+      
+Added project 2 Flowchart Guide.
+https://github.com/iamhutch/Visual-Frameworks/commit/92dbbc36a5bef6dd9c04c28dee35b0cc43af5861
+February 2, 2012 12:43 PM
+
+	+ vfw-project1.pdf
+	Added project 2 Flowchart Guide.
+
+Added styling and comment tags.
+https://github.com/iamhutch/Visual-Frameworks/commit/b8e75a24ac2f9748e79893c78814089e1df9e6f1
+February 1, 2012 9:18 PM
+
+	m index.html
+	Added styling and comment tags.
+
+Added in range input type  and semantics.
+https://github.com/iamhutch/Visual-Frameworks/commit/56e259c3f77d3a624be5bf1ae97ee6f2d26548c1
+February 1, 2012 9:18 PM
+
+	m additem.html
+      	Added in range input type  and semantics.
+
+Formated files and added basic information.
+https://github.com/iamhutch/Visual-Frameworks/commit/b8b5d7d85f74de04e1e7a780ea0decb39939aac0
+January 31, 2012 1:03 PM
+	+ additem.html
+	+ index.html
+	Formated files and added basic information.
+
+first commit
+https://github.com/iamhutch/Visual-Frameworks/commit/c38e57082621091d552d8c3000ac520cd082d72f
+January 31, 2012 12:15 PM
+
+	+ README
+	first commit
