@@ -1,16 +1,66 @@
 <!DOCTYPE  html>
+<!--
+	Project 1: Bible Study App
+	Lucy Hutcheson
+	Term 1202
+-->
 <html>
 	<head>
 		
-		<!-- Character Set Meta -->
 		<meta charset="utf-8" />
-		<!-- Page Title -->
+		<meta keywords="bible study, lessons" />
+		<meta name="description" content="Bible Studies To Go is an app that collects bible studies for later use." />
+		<meta name="robots" content="noindex,nofollow" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+		<meta name="HandheldFriendly" content="True"/>
+		<meta name="MobileOptimized" content="320"/>
+
 		<title>Bible Studies To Go</title>
+		<style type="text/css">
+			body {
+				background-image: -webkit-linear-gradient(#dddddd, #ffffff);
+				background-image: -moz-linear-gradient(#dddddd, #ffffff);
+				background-image: -o-linear-gradient(#dddddd, #ffffff);
+				background-image: linear-gradient(#dddddd, #ffffff);
+				font-family: Helvetica, Arial, sans-serif;
+			}
+			section {
+				border: 1px solid #cccccc;
+				margin-bottom: 15px;
+				padding: 10px;
+				background: #f1f1f1;
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+			}
+			#button {
+				padding: 10px;
+				background: #555555;
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+     		}
+     		#button:hover {
+     			background: #333333;
+     		}
+     		a {
+     			text-decoration: none;
+     			color: #f1f1f1;
+     		}
+     		a:hover {
+     			text-decoration: underline;
+     		}
+		</style>
 	</head>
 	<body>
-		<h1>Bible Studies To Go</h1>
-		<p>An app that collects bible study lessons for later use.</p>
-		<h3>Let's Get Started</h3>
-		<p><a href="additem.html" title="Add A Lesson">ADD A LESSON</a></p>
+		<header>
+			<h1>Bible Studies To Go</h1>
+		</header>
+		<section>
+			<p>An app that collects bible study lessons for later use.</p>
+			<h3>Let's Get Started!</h3>
+			<p><a href="additem.html" title="Add A Lesson" id="button">ADD A LESSON</a></p>
+		</section>
+		<footer>
+			<small>&copy; 2012 Lucy Hutcheson.  All Rights Reserved.</small>
+		</footer>
 	</body>
 </html>
