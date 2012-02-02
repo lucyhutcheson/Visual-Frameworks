@@ -1,29 +1,79 @@
 <!DOCTYPE  html>
+<!--
+	Project 1: Bible Study App
+	Lucy Hutcheson
+	Term 1202
+-->
 <html>
 	<head>
 		
-		<meta name="keywords" content="bible study, lessons" />
+		<meta charset="utf-8" />
+		<meta keywords="bible study, lessons" />
 		<meta name="description" content="Bible Studies To Go is an app that collects bible studies for later use." />
 		<meta name="robots" content="noindex,nofollow" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-		<meta charset="utf-8" />
+		<meta name="HandheldFriendly" content="True"/>
+		<meta name="MobileOptimized" content="320"/>
 
 		<title>Add A New Bible Study Lesson</title>
+		<style type="text/css">
+			body {
+				background-image: -webkit-linear-gradient(#dddddd, #ffffff);
+				background-image: -moz-linear-gradient(#dddddd, #ffffff);
+				background-image: -o-linear-gradient(#dddddd, #ffffff);
+				background-image: linear-gradient(#dddddd, #ffffff);
+				font-family: Helvetica, Arial, sans-serif;
+			}
+			h3 {
+				margin-bottom: 15px;
+				padding: 10px;
+				background: #555555;
+				color: #f1f1f1;
+				-moz-border-radius: 6px;
+				-webkit-border-radius: 6px;
+			}
+			form {
+				border: 1px solid #cccccc;
+				padding: 10px;
+				background: #f1f1f1;
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+     		}
+			fieldset {
+				border: 1px solid #dddddd;
+				margin-bottom: 20px;
+				padding: 15px;
+			}
+			legend {
+				font-weight: bold;
+			}
+			li {
+				margin: 10px 0;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Bible Studies To Go</h1>
+		<header>
+			<h1>Bible Studies To Go</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" title="Home">Home</a></li>
+				</ul>
+			</nav>
+			<h3>Add New Bible Study Lesson</h3>
+		</header>
 		<form action="#" method="post">
 			<fieldset>
 				<legend>Basic Information</legend>
 				<ul>
-					<li><label for="lesson-name">Lesson Name</label> <input type="text" id="lesson-name" /></li>
-					<li><label for="author">Author</label> <input type="text" id="author" /></li>
-					<li><label for="date">Date</label><input type="date" name="postdate" /></li>
+					<li><label for="lesson-name">Lesson Name:</label> <input type="text" id="lesson-name" /></li>
+					<li><label for="author">Author:</label> <input type="text" id="author" /></li>
+					<li><label for="date">Date:</label><input type="date" name="postdate" /></li>
 				</ul>
 			</fieldset>	
 			<fieldset>
 				<legend>Lesson Information</legend>
-				<label for="topic">Study Topic</label>
+				<label for="topic">Study Topic: </label>
 				<select id="topic">
 					<optgroup label="Books of the Bible">
 						<option value="Genesis">Genesis</option>
@@ -39,22 +89,32 @@
 						<option value="Family">Family</option>
 					</optgroup>
 				</select>
+				<p>Target Audience:</p>
 				<ul>
-					<li>Choose Audience:
-						<ul>
-							<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
-							<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
-							<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
-							<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
-							<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
-						</ul>
-					</li>
+					<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
+					<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
+					<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
+					<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
+					<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
 				</ul>
+				<label for="length">Length of Lesson:</label>
+				<p><input type="range" id="length" min="0" max="180" step="15" /></p>
+
 			</fieldset>	
 			<fieldset>
 				<legend>Lesson</legend>
-				<textarea name="lesson-text" rows="8" cols="40"></textarea>"
-			</fieldset>	
+				<textarea name="lesson-text" rows="8" cols="40"></textarea>
+			</fieldset>
+			<input type="submit" value="Add New Lesson" />	
 		</form>
+		<section>
+			<ul>
+				<li><a href="#" title="Clear Stored Data">Clear Stored Data</a></li>
+				<li><a href="#" title="Display Stored Data">Display Stored Data</a></li>
+			</ul>
+		</section>
+		<footer>
+			<small>&copy; 2012 Lucy Hutcheson.  All Rights Reserved.</small>
+		</footer>
 	</body>
 </html>
