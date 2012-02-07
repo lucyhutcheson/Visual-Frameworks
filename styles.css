@@ -1,17 +1,173 @@
+/* LAYOUT ELEMENTS */
 body {
-	background-image: -webkit-linear-gradient(#dddddd, #ffffff);
-	background-image: -moz-linear-gradient(#dddddd, #ffffff);
-	background-image: -o-linear-gradient(#dddddd, #ffffff);
-	background-image: linear-gradient(#dddddd, #ffffff);
+	background-color: #ebebeb;
 	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0px;
 }
-h3 {
+header h1{
+	margin: 0;
+	padding: 0 10px;
+	font-size: 24px;
+	color: #ffffff;
+	line-height: 50px;
+	background-image: linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
+	background-image: -o-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
+	background-image: -moz-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
+	background-image: -webkit-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
+	background-image: -ms-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.15, rgb(36,77,112)),
+		color-stop(0.58, rgb(65,108,146)),
+		color-stop(0.79, rgb(91,141,176))
+	);
+}
+section {
+	padding: 0 20px;
+}
+footer {
+	margin-top: 30px;
+	padding: 10px;
+	background: #ccc;
+}
+
+
+/* CONTENT ELEMENTS */
+
+a {
+	color: #333;
+}
+#nav {
+	margin-top: 10px;
+	padding: 7px 6px 0;
+	background: #7d7d7d repeat-x 0 -110px;
+	line-height: 100%;
+
+	border-radius: 2em;
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+}
+#nav li {
+	margin: 0 5px;
+	padding: 0 0 8px;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+
+/* main level link */
+#nav a {
+	font-weight: bold;
+	color: #e7e5e5;
+	text-decoration: none;
+	display: block;
+	padding:  2px 20px;
+	margin: 0;
+
+	-webkit-border-radius: 1.6em;
+	-moz-border-radius: 1.6em;
+	
+	text-shadow: 0 1px 1px rgba(0,0,0, .3);
+}
+#nav a:hover {
+	background: #000;
+	color: #fff;
+}
+
+/* main level link hover */
+#nav .current a, #nav li:hover > a {
+	background: #666  repeat-x 0 -40px;
+	color: #444;
+	border-top: solid 1px #f8f8f8;
+
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+	box-shadow: 0 1px 1px rgba(0,0,0, .2);
+
+	text-shadow: 0 1px 0 rgba(255,255,255, 1);
+}
+
+
+/* rounded corners of first and last link */
+#nav ul li:first-child > a {
+	-webkit-border-top-left-radius: 9px;
+	-moz-border-radius-topleft: 9px;
+
+	-webkit-border-top-right-radius: 9px;
+	-moz-border-radius-topright: 9px;
+}
+#nav ul li:last-child > a {
+	-webkit-border-bottom-left-radius: 9px;
+	-moz-border-radius-bottomleft: 9px;
+
+	-webkit-border-bottom-right-radius: 9px;
+	-moz-border-radius-bottomright: 9px;
+}
+
+/* clearfix */
+#nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#nav {
+	display: inline-block;
+} 
+html[xmlns] #nav {
+	display: block;
+}
+ 
+* html #nav {
+	height: 1%;
+}
+#button {
+	text-decoration: none;
 	margin-bottom: 15px;
 	padding: 10px;
 	background: #555555;
 	color: #f1f1f1;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
+	color: #ffffff;
+	padding: 10px 20px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#a1c2b7 0%,
+		#527a68 50%,
+		#416b55 50%,
+		#253b33);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#a1c2b7),
+		color-stop(0.50, #527a68),
+		color-stop(0.50, #416b55),
+		to(#253b33));
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border: 1px solid #618077;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(122,122,122,1),
+		0px 1px 0px rgba(255,255,255,0.2);
 }
 form {
 	border: 1px solid #cccccc;
