@@ -16,41 +16,8 @@
 		<meta name="MobileOptimized" content="320"/>
 
 		<title>Add A New Bible Study Lesson</title>
-		<style type="text/css">
-			body {
-				background-image: -webkit-linear-gradient(#dddddd, #ffffff);
-				background-image: -moz-linear-gradient(#dddddd, #ffffff);
-				background-image: -o-linear-gradient(#dddddd, #ffffff);
-				background-image: linear-gradient(#dddddd, #ffffff);
-				font-family: Helvetica, Arial, sans-serif;
-			}
-			h3 {
-				margin-bottom: 15px;
-				padding: 10px;
-				background: #555555;
-				color: #f1f1f1;
-				-moz-border-radius: 6px;
-				-webkit-border-radius: 6px;
-			}
-			form {
-				border: 1px solid #cccccc;
-				padding: 10px;
-				background: #f1f1f1;
-				-moz-border-radius: 10px;
-				-webkit-border-radius: 10px;
-     		}
-			fieldset {
-				border: 1px solid #dddddd;
-				margin-bottom: 20px;
-				padding: 15px;
-			}
-			legend {
-				font-weight: bold;
-			}
-			li {
-				margin: 10px 0;
-			}
-		</style>
+		<link rel="stylesheet" href="styles.css" />
+
 	</head>
 	<body>
 		<header>
@@ -68,7 +35,7 @@
 				<ul>
 					<li><label for="lesson-name">Lesson Name:</label> <input type="text" id="lesson-name" /></li>
 					<li><label for="author">Author:</label> <input type="text" id="author" /></li>
-					<li><label for="date">Date:</label><input type="date" name="postdate" /></li>
+					<li><label for="date">Date:</label><input type="date" id="date" /></li>
 				</ul>
 			</fieldset>	
 			<fieldset>
@@ -116,5 +83,6 @@
 		<footer>
 			<small>&copy; 2012 Lucy Hutcheson.  All Rights Reserved.</small>
 		</footer>
+		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
