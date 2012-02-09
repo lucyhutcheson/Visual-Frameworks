@@ -25,8 +25,8 @@
 			<nav>
 				<ul id="nav">
 					<li><a href="index.html" title="Home">Home</a></li>
-					<li><a href="#" title="Clear Stored Data">Clear Stored Data</a></li>
-					<li><a href="#" title="Display Stored Data">Display Stored Data</a></li>
+					<li><a href="#" title="Clear Stored Data" id="clear">Clear Stored Data</a></li>
+					<li><a href="#" title="Display Stored Data" id="displayLink">Display Stored Data</a></li>
 				</ul>
 			</nav>
 			<h3>Add New Bible Study Lesson</h3>
@@ -55,13 +55,13 @@
 								<option value="John">John</option>
 							</select>
 						</li>
-						<li><p>Target Audience:</p>
+						<li><label for="audience">Target Audience:</label>
 							<ul>
-								<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
-								<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
-								<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
-								<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
-								<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
+								<li><input type="radio" value="Adults" id="adults" name="audience" /><label for="adults">Adults</label></li>
+								<li><input type="radio" value="Children" id="children" name="audience" /><label for="children">Children</label></li>
+								<li><input type="radio" value="Youth" id="youth" name="audience" /><label for="youth">Youth</label></li>
+								<li><input type="radio" value="Men" id="men" name="audience" /><label for="men">Men</label></li>
+								<li><input type="radio" value="Women" id="women" name="audience" /><label for="women">Women</label></li>
 							</ul>
 						</li>
 						<li><label for="length">Length of Lesson:</label>
@@ -74,7 +74,7 @@
 					<legend>Lesson</legend>
 					<textarea name="lesson-text" rows="8" cols="40"></textarea>
 				</fieldset>
-				<input type="submit" onclick="storeData();" value="Add New Lesson" />	
+				<input type="submit" id="submit" value="Add New Lesson" />	
 			</form>
 		</section>
 		<footer>

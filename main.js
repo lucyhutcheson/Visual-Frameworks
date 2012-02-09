@@ -29,28 +29,65 @@ window.addEventListener("DOMContentLoaded", function() {
 		selectLi.appendChild(makeSelect);
 	}
 	
-	function storeData(key) {
-		localStorage.setItem("test", "hello");
-		alert(localStorage.key(0));
+	//Find the value of the selected radio button.
+	function getSelectedRadio(){
+		var radios = document.forms[0].audience;
+		for (var i=0; i<radios.length; i++){
+			if(radios[i].checked) {
+				audienceValue = radios[i].value;
+			}
+		}
+		return audienceValue;
+	}
+
+	//Save data into local storage.
+	function storeData() {
+		var id = Math.floor(Math.random()*10000001);
+		// Gather up all form values and labels.
+		var item = {};
+			item.name = ["Lesson Name:", $('lesson-name').value];
+			item.author = ["Author:", $('author').value];
+			item.date = ["Date:", $('date').value];
+			item.topic = ["Topics:", $('topics').value];
+			item.book = ["Book:", $('book').value];
+			item.audience = ["Audience:", audienceValue];
+			item.length = ["Lesson Length:", $('length').value];
+			item.text = ["Lesson:", $('lesson-text').value];
+			
+		//Save data into local storage
+		localStorage.setItem(id, JSON.stringify(item));
+		
+		alert("Lesson Saved!");
 	}
 	
+	//Clear all data
+	function clearLocal() {
+		if(localStorage.length === 0) {
+			alert("There is no data to clear.");
+		}else{
+			localStorage.clear();
+			alert("All information deleted.");
+			window.location.reload();
+			return false;
+		}
+	}
 	//Variable defaults
 	var bibleTopics = ["--Choose A Topic--", "Christian Life", "Marriage", "Family"];
 	makeTopics();
 	
 	//Set Link & Submit Click Events
-	/*var displayLink = $('displayLink');
-	displayLink.addEventLister("click", getData);
+	var displayLink = $('displayLink');
+	displayLink.addEventListener("click", getData);
 	var clearLink = $('clear');
-	clearLink.addEventLister("click", clearLocal);*/
+	clearLink.addEventListener("click", clearLocal);
 	var save = $('submit');
-	save.addEventLister("click", storeData);
+	save.addEventListener("click", storeData);
 	
 })
 
 
 
-function getItems() {
+function getData() {
 	if (localStorage.getItem('appItemName')) {
 		var itemName = localStorage.getItem('appItemName');
 		var itemQty = localStorage.getItem('appItemQty');
