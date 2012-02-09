@@ -14,33 +14,41 @@ window.addEventListener("DOMContentLoaded", function() {
 	}
 	
 	//Create select field element and populate with options.
-	function makeCats() {
+	function makeTopics() {
 		var formTag = document.getElementsByTagName("form"), // formTag is an array of all form tags.
 			selectLi = $('select'),
 			makeSelect = document.createElement('select');
-			makeSelect.setAttribute("id", "groups");	
+			makeSelect.setAttribute("id", "topics");
+		for (var i=0, j=bibleTopics.length; i<j; i++){
+			var makeOption = document.createElement('option');
+			var optText = bibleTopics[i];
+			makeOption.setAttribute("value", optText);
+			makeOption.innerHTML = optText;
+			makeSelect.appendChild(makeOption);
+		}
+		selectLi.appendChild(makeSelect);
+	}
+	
+	function storeData(key) {
+		localStorage.setItem("test", "hello");
+		alert(localStorage.key(0));
 	}
 	
 	//Variable defaults
-	var contactGroups = ["--Choose A Group", "Friends", "Family", "Work"];
+	var bibleTopics = ["--Choose A Topic--", "Christian Life", "Marriage", "Family"];
+	makeTopics();
 	
 	//Set Link & Submit Click Events
-	var displayLink = $('displayLink');
+	/*var displayLink = $('displayLink');
 	displayLink.addEventLister("click", getData);
 	var clearLink = $('clear');
-	clearLink.addEventLister("click", clearLocal);
+	clearLink.addEventLister("click", clearLocal);*/
 	var save = $('submit');
 	save.addEventLister("click", storeData);
 	
 })
 
 
-function storeItems(id) {
-	var itemName = document.getElementById('itemName').value;
-	var itemQty = document.getElementById('itemQty').value;
-	localStorage.setItem('appItemName', itemName);
-	localStorage.setItem('appItemQty', itemQty);
-}
 
 function getItems() {
 	if (localStorage.getItem('appItemName')) {

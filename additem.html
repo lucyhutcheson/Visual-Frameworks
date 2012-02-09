@@ -25,6 +25,8 @@
 			<nav>
 				<ul id="nav">
 					<li><a href="index.html" title="Home">Home</a></li>
+					<li><a href="#" title="Clear Stored Data">Clear Stored Data</a></li>
+					<li><a href="#" title="Display Stored Data">Display Stored Data</a></li>
 				</ul>
 			</nav>
 			<h3>Add New Bible Study Lesson</h3>
@@ -41,46 +43,39 @@
 				</fieldset>	
 				<fieldset>
 					<legend>Lesson Information</legend>
-					<label for="topic">Study Topic: </label>
-					<select id="topic">
-						<optgroup label="Books of the Bible">
-							<option value="Genesis">Genesis</option>
-							<option value="Exodus">Exodus</option>
-							<option value="Matthew">Matthew</option>
-							<option value="Mark">Mark</option>
-							<option value="Luke">Luke</option>
-							<option value="John">John</option>
-						</optgroup>
-						<optgroup label="Topical">
-							<option value="Christian Life">Christian Life</option>
-							<option value="Marriage">Marriage</option>
-							<option value="Family">Family</option>
-						</optgroup>
-					</select>
-					<p>Target Audience:</p>
 					<ul>
-						<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
-						<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
-						<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
-						<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
-						<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
+						<li id="select"><label for="topics">Lesson Topic: </label></li>
+						<li><label for="book">Book Focus: </label>
+							<select id="book">
+								<option value="Genesis">Genesis</option>
+								<option value="Exodus">Exodus</option>
+								<option value="Matthew">Matthew</option>
+								<option value="Mark">Mark</option>
+								<option value="Luke">Luke</option>
+								<option value="John">John</option>
+							</select>
+						</li>
+						<li><p>Target Audience:</p>
+							<ul>
+								<li><input type="checkbox" value="Adults" id="adults" /><label for="adults">Adults</label></li>
+								<li><input type="checkbox" value="Children" id="children" /><label for="children">Children</label></li>
+								<li><input type="checkbox" value="Youth" id="youth" /><label for="youth">Youth</label></li>
+								<li><input type="checkbox" value="Men" id="men" /><label for="men">Men</label></li>
+								<li><input type="checkbox" value="Women" id="women" /><label for="women">Women</label></li>
+							</ul>
+						</li>
+						<li><label for="length">Length of Lesson:</label>
+							<p><input type="range" id="length" min="0" max="180" step="15" /></p>
+						</li>
 					</ul>
-					<label for="length">Length of Lesson:</label>
-					<p><input type="range" id="length" min="0" max="180" step="15" /></p>
 	
 				</fieldset>	
 				<fieldset>
 					<legend>Lesson</legend>
 					<textarea name="lesson-text" rows="8" cols="40"></textarea>
 				</fieldset>
-				<input type="submit" value="Add New Lesson" />	
+				<input type="submit" onclick="storeData();" value="Add New Lesson" />	
 			</form>
-		</section>
-		<section>
-			<ul>
-				<li><a href="#" title="Clear Stored Data">Clear Stored Data</a></li>
-				<li><a href="#" title="Display Stored Data">Display Stored Data</a></li>
-			</ul>
 		</section>
 		<footer>
 			<small>&copy; 2012 Lucy Hutcheson.  All Rights Reserved.</small>
