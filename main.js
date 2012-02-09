@@ -5,15 +5,35 @@
  * Created for:  Visual Frameworks 1202
  */
 
-function styleField() {
-	var field = document.getElementById("itemName");
-	field.style.backgroundColor = "#ffb";
-}
+// Wait until the DOM is ready.
+window.addEventListener("DOMContentLoaded", function() {
+	//getElementById Function
+	function $(x) {
+		var theElement = document.getElementById(x);
+		return theElement;
+	}
+	
+	//Create select field element and populate with options.
+	function makeCats() {
+		var formTag = document.getElementsByTagName("form"), // formTag is an array of all form tags.
+			selectLi = $('select'),
+			makeSelect = document.createElement('select');
+			makeSelect.setAttribute("id", "groups");	
+	}
+	
+	//Variable defaults
+	var contactGroups = ["--Choose A Group", "Friends", "Family", "Work"];
+	
+	//Set Link & Submit Click Events
+	var displayLink = $('displayLink');
+	displayLink.addEventLister("click", getData);
+	var clearLink = $('clear');
+	clearLink.addEventLister("click", clearLocal);
+	var save = $('submit');
+	save.addEventLister("click", storeData);
+	
+})
 
-function unstyleField() {
-	var field = document.getElementById("itemName");
-	field.style.backgroundColor = "#fff";
-}
 
 function storeItems(id) {
 	var itemName = document.getElementById('itemName').value;
