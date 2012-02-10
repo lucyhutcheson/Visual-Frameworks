@@ -25,14 +25,16 @@
 			<nav>
 				<ul id="nav">
 					<li><a href="index.html" title="Home">Home</a></li>
-					<li><a href="#" title="Clear Stored Data" id="clear">Clear Stored Data</a></li>
-					<li><a href="#" title="Display Stored Data" id="displayLink">Display Stored Data</a></li>
+					<li><a href="#" title="Clear Stored Data" id="clear">Clear Lessons</a></li>
+					<li><a href="#" title="Display Stored Data" id="displayLink">Display Lessons</a></li>
+					<li><a href="additem.html" id="addNew" style="display:none;">Add New Lesson</a></li>
 				</ul>
 			</nav>
-			<h3>Add New Bible Study Lesson</h3>
+			<h3 id="pageTitle">Add New Bible Study Lesson</h3>
+			<div id="message"></div>
 		</header>
 		<section>
-			<form action="#" method="post">
+			<form action="#" method="post" id="lessonForm">
 				<fieldset>
 					<legend>Basic Information</legend>
 					<ul>
@@ -47,6 +49,7 @@
 						<li id="select"><label for="topics">Lesson Topic: </label></li>
 						<li><label for="book">Book Focus: </label>
 							<select id="book">
+								<option value="" selected="selected">--Choose A Book--</option>
 								<option value="Genesis">Genesis</option>
 								<option value="Exodus">Exodus</option>
 								<option value="Matthew">Matthew</option>
@@ -72,14 +75,11 @@
 				</fieldset>	
 				<fieldset>
 					<legend>Lesson</legend>
-					<textarea name="lesson-text" rows="8" cols="40"></textarea>
+					<textarea id="lesson-text" name="lesson-text" rows="8" cols="40"></textarea>
 				</fieldset>
 				<input type="submit" id="submit" value="Add New Lesson" />	
 			</form>
 		</section>
-		<footer>
-			<small>&copy; 2012 Lucy Hutcheson.  All Rights Reserved.</small>
-		</footer>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
