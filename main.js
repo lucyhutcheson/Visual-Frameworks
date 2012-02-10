@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
+	//Variable defaults
+	var bibleTopics = ["--Choose A Topic--", "Christian Life", "Marriage", "Family"],
+		audienceValue;
+	makeTopics();
+
 	//Create select field element and populate with options.
 	function makeTopics(){
 		var formTag = document.getElementsByTagName("form"), // formTag is an array of all form tags.
@@ -28,10 +33,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		selectLi.appendChild(makeSelect);
 	}
 	
-	//Variable defaults
-	var bibleTopics = ["--Choose A Topic--", "Christian Life", "Marriage", "Family"],
-		audienceValue;
-	makeTopics();
 	
 	//Find the value of the selected radio button.
 	function getSelectedRadio(){
