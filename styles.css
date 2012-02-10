@@ -3,7 +3,7 @@ body {
 	background-color: #ebebeb;
 	font-family: Helvetica, Arial, sans-serif;
 	margin: 0;
-	padding: 0px;
+	padding: 0px 0 40px 0;
 }
 header h1{
 	margin: 0;
@@ -27,7 +27,8 @@ header h1{
 	);
 }
 section {
-	padding: 0 20px;
+	width: 95%;
+	margin: 0 auto;
 }
 footer {
 	margin-top: 30px;
@@ -169,12 +170,29 @@ html[xmlns] #nav {
 		0px -1px 0px rgba(122,122,122,1),
 		0px 1px 0px rgba(255,255,255,0.2);
 }
-form {
+h3 {
+	padding-left: 10px;
+}
+form, #items, #message p {
 	border: 1px solid #cccccc;
 	padding: 10px;
 	background: #fff;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+#message p.error {
+	color: #990000;
+	width: 80%;
+	margin: 0 auto;
+}
+#message p.success {
+	color: #006600;
+	width: 80%;
+	margin: 0 auto;
+}
+#items {
+	width: 93%;
+	margin: 0 auto;
 }
 fieldset {
 	border: 0 none;
