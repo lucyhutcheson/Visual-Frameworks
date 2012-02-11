@@ -1,7 +1,7 @@
 /**
- * Project 2 Deliverable
+ * Project 3 Deliverable
  * @author Lucy Hutcheson
- * Date: 2012-02-09
+ * Date: 2012-02-16
  * Created for:  Visual Frameworks 1202
  */
 
@@ -70,6 +70,15 @@ window.addEventListener("DOMContentLoaded", function(){
 			default:
 				return false;
 		}
+	}
+
+	function validateForm() {
+		var getEmail = document.forms[0]["email"].value;
+		var re = /^\w+([\.-]?]\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		if (!(re.exec(getEmail))){
+			error = "Please enter a valid email address.\n";
+		}
+		if (error) alert(error);
 	}
 
 	//Save data into local storage.
