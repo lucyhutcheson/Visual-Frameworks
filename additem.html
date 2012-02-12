@@ -25,29 +25,30 @@
 			<nav>
 				<ul id="nav">
 					<li><a href="index.html" title="Home">Home</a></li>
-					<li><a href="#" title="Clear Stored Data" id="clear">Clear Lessons</a></li>
+					<li><a href="#" title="Clear Stored Data" id="clear">Clear All Lessons</a></li>
 					<li><a href="#" title="Display Stored Data" id="displayLink">Display Lessons</a></li>
 					<li><a href="additem.html" id="addNew" style="display:none;">Add New Lesson</a></li>
 				</ul>
 			</nav>
 			<h3 id="pageTitle">Add New Bible Study Lesson</h3>
-			<div id="message"></div>
+			<span id="required">* fields are required.</span>
+			<ul id="errors"></ul>
 		</header>
 		<section>
 			<form action="#" method="post" id="lessonForm">
 				<fieldset>
 					<legend>Basic Information</legend>
 					<ul>
-						<li><label for="lesson-name">Lesson Name:</label> <input type="text" id="lesson-name" /></li>
-						<li><label for="author">Author:</label> <input type="text" id="author" /></li>
-						<li><label for="email">Email:</label> <input type="text" id="email" /></li>
-						<li><label for="date">Date:</label><input type="date" id="date" /></li>
+						<li><label for="lesson-name">Lesson Name: </label> <input type="text" id="lesson-name" /> <span class="red">*</span></li>
+						<li><label for="author">Author: </label> <input type="text" id="author" /> <span class="red">*</span></li>
+						<li><label for="email">Email: </label> <input type="text" id="email" /> <span class="red">*</span></li>
+						<li><label for="date">Date: </label><input type="date" id="date" /></li>
 					</ul>
 				</fieldset>	
 				<fieldset>
 					<legend>Lesson Information</legend>
 					<ul>
-						<li id="select"><label for="topics">Lesson Topic: </label></li>
+						<li id="select"><label for="topics">Lesson Topic: </label> <span class="red">*</span></li>
 						<li><label for="book">Book Focus: </label>
 							<select id="book">
 								<option value="" selected="selected">--Choose A Book--</option>
@@ -59,7 +60,7 @@
 								<option value="John">John</option>
 							</select>
 						</li>
-						<li><label for="audience">Target Audience:</label>
+						<li><label for="audience">Target Audience: </label>
 							<ul>
 								<li><input type="radio" value="Adults" id="adults" name="audience" /><label for="adults">Adults</label></li>
 								<li><input type="radio" value="Children" id="children" name="audience" /><label for="children">Children</label></li>
@@ -68,7 +69,7 @@
 								<li><input type="radio" value="Women" id="women" name="audience" /><label for="women">Women</label></li>
 							</ul>
 						</li>
-						<li><label for="length">Length of Lesson:</label>
+						<li><label for="length">Length of Lesson: </label>
 							<p><input type="range" id="length" min="0" max="180" step="15" /></p>
 						</li>
 					</ul>

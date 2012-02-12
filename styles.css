@@ -180,6 +180,9 @@ html[xmlns] #nav {
 h3 {
 	padding-left: 10px;
 }
+header span {
+	padding-left: 30px;
+}
 form, #items, #message p {
 	border: 1px solid #cccccc;
 	padding: 10px;
@@ -187,10 +190,15 @@ form, #items, #message p {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-#message p.error {
-	color: #990000;
-	width: 80%;
-	margin: 0 auto;
+.red {
+	color: red;
+}
+#errors {
+	color: red;
+	font-weight: bold;
+}
+#errors li {
+	list-style: none;
 }
 #message p.success {
 	color: #006600;
@@ -214,4 +222,14 @@ legend {
 }
 li {
 	margin: 10px 0;
+}
+.results {
+	padding-right: 30px;
+}
+.results-details {
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+.results li {
+	list-style: none;
 }
