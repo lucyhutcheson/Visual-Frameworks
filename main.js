@@ -118,7 +118,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			getImage(obj.audience[1], makeSubList); // Get images for audience
 			for(var n in obj){
 				var makeSubli = document.createElement('li');
-				makeSubli.setAttribute("class", "item-details");
+				var audienceClass = obj.audience[1];
+				makeSubli.setAttribute("class", "item-details " + audienceClass.toLowerCase() );
 				makeSubList.appendChild(makeSubli);
 				var optSubText = "<strong>"+obj[n][0]+" </strong> "+obj[n][1];
 				makeSubli.innerHTML = optSubText;
@@ -149,6 +150,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	function makeItemLinks(key, linksLi){	
 		//Add edit link
 		var editLink = document.createElement('a');
+		editLink.setAttribute("class", "edit-link");
 		editLink.href = "#";
 		editLink.key = key;
 		var editText = "Edit Lesson";
@@ -156,18 +158,17 @@ window.addEventListener("DOMContentLoaded", function(){
 		editLink.innerHTML = editText;
 		linksLi.appendChild(editLink);
 		
-		//Add line break
-		var breakTag = document.createElement('br');
-		linksLi.appendChild(breakTag);
 		
 		//Add delete link
 		var deleteLink = document.createElement('a');
+		deleteLink.setAttribute("class", "delete-link");
 		deleteLink.href = "#";
 		deleteLink.key = key;
 		var deleteText = "Delete Lesson";
 		deleteLink.addEventListener("click", deleteLesson);
 		deleteLink.innerHTML = deleteText;
 		linksLi.appendChild(deleteLink);
+		linksLi.setAttribute("id", "modify-links");
 	}
 	
 	function editLesson(){

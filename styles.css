@@ -17,13 +17,13 @@ header h1{
 	padding: 0 10px;
 	font-size: 24px;
 	color: #ffffff;
+	text-shadow: 1px 1px 0px #5379a3;
 	line-height: 50px;
 	background-image: linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
 	background-image: -o-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
 	background-image: -moz-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
 	background-image: -webkit-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
 	background-image: -ms-linear-gradient(bottom, rgb(36,77,112) 15%, rgb(65,108,146) 58%, rgb(91,141,176) 79%);
-	
 	background-image: -webkit-gradient(
 		linear,
 		left bottom,
@@ -51,7 +51,7 @@ a {
 }
 #nav {
 	margin-top: 10px;
-	padding: 7px 6px 0;
+	padding: 7px 4px 0;
 	background: #7d7d7d repeat-x 0 -110px;
 	line-height: 100%;
 
@@ -63,7 +63,7 @@ a {
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .4);
 }
 #nav li {
-	margin: 0 5px;
+	margin: 0 2px;
 	padding: 0 0 8px;
 	float: left;
 	position: relative;
@@ -77,7 +77,7 @@ a {
 	color: #e7e5e5;
 	text-decoration: none;
 	display: block;
-	padding:  2px 20px;
+	padding:  2px 10px;
 	margin: 0;
 
 	-webkit-border-radius: 1.6em;
@@ -232,4 +232,64 @@ li {
 }
 .results li {
 	list-style: none;
+}
+.item-details strong {
+	margin-right: 10px;
+}
+.adults strong{
+	color: #1f371e;
+}
+.children strong{
+	color: #ff6800;
+}
+.youth strong{
+	color: #5f3eab;
+}
+.men strong{
+	color: #1f2f63;
+}
+.women strong{
+	color: #ff4646;
+}
+a.edit-link, a.delete-link {
+	margin: 10px;
+	text-decoration: none;
+	background-image: linear-gradient(bottom, rgb(140,142,150) 30%, rgb(168,171,180) 65%);
+	background-image: -o-linear-gradient(bottom, rgb(140,142,150) 30%, rgb(168,171,180) 65%);
+	background-image: -moz-linear-gradient(bottom, rgb(140,142,150) 30%, rgb(168,171,180) 65%);
+	background-image: -webkit-linear-gradient(bottom, rgb(140,142,150) 30%, rgb(168,171,180) 65%);
+	background-image: -ms-linear-gradient(bottom, rgb(140,142,150) 30%, rgb(168,171,180) 65%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.3, rgb(140,142,150)),
+		color-stop(0.65, rgb(168,171,180))
+	);
+	color: #ebebeb;
+	padding: 8px 15px;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border: 1px solid #ccc;
+}
+a.edit-link:hover, a.delete-link:hover {
+	background-image: linear-gradient(bottom, rgb(41,103,160) 40%, rgb(70,134,192) 70%, rgb(98,161,231) 85%);
+	background-image: -o-linear-gradient(bottom, rgb(41,103,160) 40%, rgb(70,134,192) 70%, rgb(98,161,231) 85%);
+	background-image: -moz-linear-gradient(bottom, rgb(41,103,160) 40%, rgb(70,134,192) 70%, rgb(98,161,231) 85%);
+	background-image: -webkit-linear-gradient(bottom, rgb(41,103,160) 40%, rgb(70,134,192) 70%, rgb(98,161,231) 85%);
+	background-image: -ms-linear-gradient(bottom, rgb(41,103,160) 40%, rgb(70,134,192) 70%, rgb(98,161,231) 85%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.4, rgb(41,103,160)),
+		color-stop(0.7, rgb(70,134,192)),
+		color-stop(0.85, rgb(98,161,231))
+	);
+	color: #fff;
+}
+#modify-links {
+	margin: 30px 0;
 }
