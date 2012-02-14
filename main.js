@@ -1,7 +1,7 @@
 /**
- * Project 3 Deliverable
+ * Project 4 Deliverable
  * @author Lucy Hutcheson
- * Date: 2012-02-16
+ * Date: 2012-02-23
  * Created for:  Visual Frameworks 1202
  */
 
@@ -92,10 +92,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		toggleControls("on");
 		errMsg.innerHTML = ""; //Reset error messages
 		if(localStorage.length === 0){
-			var txt = document.createElement('li');
-			txt.innerHTML = "There are no lessons to display.";
-			errMsg.appendChild(txt);
-			return false;
+			alert("There is no data inlocal storage so default data was added.")
+			autoFillData();
 		}
 		
 		//write Data from Local Storage to the browser
@@ -117,6 +115,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var makeSubList = document.createElement('ul'); //create sub ul
 			makeSubList.setAttribute("class", "results-details");
 			makeli.appendChild(makeSubList); // add sub ul to li
+			getImage(obj.audience[1], makeSubList); // Get images for audience
 			for(var n in obj){
 				var makeSubli = document.createElement('li');
 				makeSubli.setAttribute("class", "item-details");
@@ -126,6 +125,23 @@ window.addEventListener("DOMContentLoaded", function(){
 				makeSubList.appendChild(linksLi);
 			}
 			makeItemLinks(localStorage.key(i), linksLi); //Create our edit and delete links for each item in local storage.
+		}
+	}
+	
+	//Get the image for the right audience
+	function getImage(audience, makeSubList){
+		var imageLi = document.createElement('li');
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement('img');
+		var setSrc = newImg.setAttribute("src", "images/"+ audience + ".png");
+		imageLi.appendChild(newImg);
+	}
+	
+	function autoFillData(){
+		//Store the JSON object in local storage
+		for(var n in json){
+			var id = Math.floor(Math.random()*10000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
 	
